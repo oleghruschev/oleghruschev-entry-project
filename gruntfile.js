@@ -40,15 +40,17 @@ module.exports = function(grunt) {
               files: ['css/*.scss'],
               tasks: ['sass'],
               options: {
-                  spawn: false,
+                  spawn: false
               }
           }
       }
   });
+
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
+  grunt.registerTask('default', ['concat', 'sass', 'watch']);
+
 };
 
-grunt.loadNpmTasks('grunt-contrib-concat');
-grunt.loadNpmTasks('grunt-contrib-sass');
-grunt.loadNpmTasks('grunt-contrib-watch');
-
-grunt.registerTask('default', ['concat', 'sass', 'watch']);
