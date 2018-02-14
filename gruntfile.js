@@ -9,6 +9,18 @@ module.exports = function(grunt) {
                   'node_modules/lodash/lodash.js'
               ],
               dest: 'build/libs.js'
+          },
+          constructor: {
+              src: [
+                  //
+              ],
+              dest: 'build/constructor.js'
+          },
+          app: {
+              src: [
+                  //
+              ],
+              dest: 'build/app.js'
           }
       },
 
