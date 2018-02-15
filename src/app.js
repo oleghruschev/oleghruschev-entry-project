@@ -1,0 +1,1 @@
+const formArticul = new FormArticul();
