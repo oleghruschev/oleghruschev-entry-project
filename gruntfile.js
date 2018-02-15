@@ -42,7 +42,7 @@ module.exports = function(grunt) {
               tasks: ['sass'],
               options: {
                   spawn: false
-              }
+               }
           }
       }
   });
@@ -54,4 +54,3 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['concat', 'sass', 'watch']);
 
 };
-
