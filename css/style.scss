@@ -36,6 +36,7 @@ p {
   left: 50%;
   margin-top: -150px;
   margin-left: -200px;
+  display: none;
   background-color: $site-color;
   @include border-radius(11px);
 }

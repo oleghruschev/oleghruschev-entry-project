@@ -5,8 +5,7 @@
   ],
   "helpers": [
     "helpers/**/*.js",
-    "../build/libs.js",
-    "../build/constructor.js"
+    "../build/libs.js"
   ],
   "stopSpecOnExpectationFailure": false,
   "random": true
