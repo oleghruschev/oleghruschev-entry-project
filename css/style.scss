@@ -1,6 +1,6 @@
 $font-family: 'Open Sans', sans-serif;
 $font-size_btn: 1.5rem;
-$site-color: beige;
+$site-color: #f5f5ed;
 
 @mixin border-radius($r) {
   -webkit-border-radius: $r;
@@ -27,6 +27,10 @@ p {
   cursor: pointer;
   @include border-radius(17px);
   background-color: $site-color;
+  border: 1px solid rgba(0,0,0,.3);
+  &:hover {
+    border-color: #000;
+  }
 }
 
 .modal_wrap {
@@ -36,9 +40,12 @@ p {
   left: 50%;
   margin-top: -150px;
   margin-left: -200px;
-  display: none;
   background-color: $site-color;
   @include border-radius(11px);
+}
+
+.modal_close {
+  display: none;
 }
 
 .modal {
@@ -63,7 +70,12 @@ p {
     cursor: pointer;
     font-weight: bold;
     font-size: $font-size_btn;
+    border: 1px solid rgba(0,0,0,.3);
     background-color: #fff;
+    &:hover {
+      color: #fff;
+      background: red;
+    }
   }
   p:first-child {
     font-size: 2.3rem;
@@ -103,4 +115,3 @@ p {
     transform: rotate(-45deg);
   }
 }
-
