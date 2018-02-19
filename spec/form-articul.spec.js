@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 describe("form-articul", function() {
 
     $('body').append(
@@ -23,7 +22,7 @@ describe("form-articul", function() {
         expect($('.modal_wrap')).toHaveClass('modal_close');
     });
 });
-=======
+
 describe("form-articul", function() {
 
     $('body').append(
@@ -48,4 +47,4 @@ describe("form-articul", function() {
         expect($('.modal_wrap')).toHaveClass('modal_close');
     });
 });
->>>>>>> 0d494e7cb59abeb25bdfd46de3a130005f8e563a
+
