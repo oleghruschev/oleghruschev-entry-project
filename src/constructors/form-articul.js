@@ -14,7 +14,7 @@ const FormArticul = Backbone.View.extend({
     },
     openProducts: function() {
       this.$('.products_wrap').removeClass("modal_close");
-      // this.$('.modal_wrap').addClass("modal_close");
+      this.$('.modal_wrap').addClass("modal_close");
       // this.$('.append_btn').addClass("modal_close");
     }
 });
