@@ -1,3 +1,9 @@
 var formArticul = new FormArticul();
 
-const productsView = new ProductsView();
+const productsModel = new ProductsModel({
+    // name: "phone",
+});
+
+const productsView = new ProductsView({
+    model: productsModel
+});
