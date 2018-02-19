@@ -13,7 +13,6 @@ module.exports = function(grunt) {
           constructor: {
               src: [
                   'src/constructors/*.js'
-
               ],
               dest: 'build/constructor.js'
           },

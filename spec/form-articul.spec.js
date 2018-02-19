@@ -14,11 +14,11 @@ describe("form-articul", function() {
 
     it("open the form", function() {
         $('.append_btn').trigger('click');
-        expect($('.modal_wrap')).toBeVisible()
+        expect($('.modal_wrap')).not.toHaveClass('modal_close');
     });
 
     it("close the form", function() {
         $('.close').trigger('click');
-        expect($('.modal_wrap')).not.toBeVisible()
+        expect($('.modal_wrap')).toHaveClass('modal_close');
     });
 });
