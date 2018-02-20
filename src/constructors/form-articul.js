@@ -2,9 +2,9 @@ const FormArticul = Backbone.View.extend({
     el: ".container",
 
     events: {
-        "click .append_btn" : "openForm",
-        "click .close"      : "closeForm",
-        "click .modal_btn" : "openProducts"
+        "click .append_btn"      : "openForm",
+        "click .close"           : "closeForm",
+        "click .append_products" : "openProducts"
     },
 
     openForm: function() {
