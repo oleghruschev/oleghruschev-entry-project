@@ -4,5 +4,11 @@ const ProductsModel = Backbone.Model.extend({
     characteristic: "info",
     photoURL: " "
   },
-  url: 'fbgf'
+
+  baseUrl: 'https://www.sima-land.ru/api/v3/item/',
+    url: 'https://www.sima-land.ru/api/v3/item/',
+
+  updateUrl: function (id) {
+      this.url = this.baseUrl + String(id) + '/'
+  }
 });

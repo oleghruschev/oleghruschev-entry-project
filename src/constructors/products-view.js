@@ -1,12 +1,11 @@
 const ProductsView = Backbone.View.extend({
     el: ".container",
 
-    events: {
-        "click .modal_btn" : "setName"
+    initialize: function () {
+      this.listenTo(this.model, 'sync', this.renderHeadline)
     },
 
-    setName: function() {
-        this.$('.name_products').text(this.model.get("name"));
-        // this.$('.name_products').text($('.textarea').val());
+    renderHeadline: function (model) {
+        this.$('.name_products').text(model.get("name"));
     }
 });
