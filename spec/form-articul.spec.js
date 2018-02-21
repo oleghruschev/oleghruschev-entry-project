@@ -2,7 +2,13 @@ describe("form-articul", function() {
 
     $('body').append(
         '<div class="container">' +
-            '<div class="modal_wrap"><span class="close"></span></div>' +
+            '<button class="append_btn"></button>' +
+            '<div class="modal_wrap">' +
+                '<button class="append_products"></button>' +
+                '<span class="close"></span>' +
+            '</div>' +
+            '<div class="products_wrap"></div>' +
+                '<h1 class="name_products">Название товара</h1>' +
         '</div>'
     );
 
@@ -17,8 +23,19 @@ describe("form-articul", function() {
         expect($('.modal_wrap')).not.toHaveClass('modal_close');
     });
 
+
     it("close the form", function() {
         $('.close').trigger('click');
+        $('.append_products').trigger('click');
         expect($('.modal_wrap')).toHaveClass('modal_close');
+    });
+
+    it("open the products", function() {
+        $('.append_products').trigger('click');
+        expect($('.products_wrap')).not.toHaveClass('modal_close');
+    });
+
+    it('reliable Url', function() {
+        expect(formArticul.item.baseUrl).toEqual('https://www.sima-land.ru/api/v3/item/')
     });
 });

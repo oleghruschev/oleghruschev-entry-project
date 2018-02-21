@@ -7,5 +7,7 @@ const ProductsView = Backbone.View.extend({
 
     renderHeadline: function (model) {
         this.$('.name_products').text(model.get("name"));
+
+        this.$('.show_img').attr("src", model.get("img"));
     }
 });
