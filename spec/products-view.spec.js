@@ -7,10 +7,10 @@ describe('products-view', function () {
         };
 
     it('should render headline on model sync', function () {
-        spyOn(ProductsView.prototype, 'renderHeadline');
+        spyOn(ProductsView.prototype, 'renderProductInformation');
         instance = createInstance();
         instance.model.trigger('sync');
-        expect(instance.renderHeadline).toHaveBeenCalledTimes(1);
+        expect(instance.renderProductInformation).toHaveBeenCalledTimes(1);
     });
 
     it('call the updateUrl', function() {
