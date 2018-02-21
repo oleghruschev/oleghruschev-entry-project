@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>sima_land</title>
     <link rel="stylesheet" href="css/style.css">
@@ -10,87 +10,151 @@
 
 </head>
 <body>
-    <div class="container">
-        <button class="append_btn">+Добавить товары по артикулу</button>
-        <div class="modal_wrap modal_close">
-            <span class="close"></span>
-            <div class="modal">
-                <p>Добавление товара в корзину по артикулу</p>
-                <p>Введите артикул через пробел или с новой строки, например 1243242 2153287 1236302</p>
-                <textarea class="textarea"></textarea>
-                <p class="modal_p">Не более 1000 артикулов за раз</p>
-                <button class="append_products">Добавить</button>
-            </div>
-        </div>
-
-        <div class="products_wrap modal_close">
-          <h1 class="name_products">Название товара</h1>
-          <div class="products">
-            <div class="products_img">
-              <img class="show_img" alt="show_img">
-            </div>
-            <div class="products_info">
-              <div class="basket">
-                <button>В корзину</button>
-              </div>
-                <div class="credit_information">
-                    Доступно для покупки в кредит
-                </div>
-              <div class="characteristic">
-                <div class="characteristic_nav">
-                  <ul>
-                    <li><a href="#" id="a_active">характеристики</a></li>
-                    <li><a href="#">описание</a></li>
-                    <li><a href="#">задать вопрос</a></li>
-                    <li><a href="#">оставить отзыв</a></li>
-                  </ul>
-                </div>
-                <div class="properties">
-                  <ul>
-                    <li class="properties_header">Общие</li>
-                    <li>
-                        <span>Торговая марка</span><span></span><span class="trademark">инфо</span>
-                    </li>
-                    <li>
-                        <span>Артикул</span><span class="sid_products">инфо</span>
-                    </li>
-                    <li>
-                        <span>Сертификат</span><span class="certificate">инфо</span>
-                    </li>
-                    <li>
-                        <span>Страна</span><span class="country">инфо</span>
-                    </li>
-                    <li>
-                        <span>Состав</span><span class="stuff">инфо</span>
-                    </li>
-                    <li>
-                        <span>Серия</span><span class="series">инфо</span>
-                    </li>
-                    <li class="properties_header">Упаковка и фасовка</li>
-                    <li>
-                        <span>В боксе</span><span>инфо</span>
-                    </li>
-                    <li>
-                        <span>Фасовка</span><span>инфо</span>
-                    </li>
-                    <li>
-                        <span>Индивидуальная упаковка</span><span>инфо</span>
-                    </li>
-                    <li>
-                        <span>Размер упаковки</span><span>инфо</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="container">
+    <button class="append_btn">+Добавить товары по артикулу</button>
+    <div class="modal_wrap modal_close">
+        <span class="close"></span>
+        <div class="modal">
+            <p>Добавление товара в корзину по артикулу</p>
+            <p>Введите артикул через пробел или с новой строки, например 1243242 2153287 1236302 1236193 1236194 1236276
+                2332171 1204972</p>
+            <textarea class="textarea"></textarea>
+            <p class="modal_p">Не более 1000 артикулов за раз</p>
+            <button class="append_products">Добавить</button>
         </div>
     </div>
 
-    <script type="text/javascript" src="build/libs.js"></script>
+    <div class="products_wrap modal_close">
+        <h1 class="name_products">Название товара</h1>
+        <div class="products">
+            <div class="products_img">
+                <img class="show_img" alt="show_img">
+            </div>
+            <div class="products_info">
+                <div class="basket">
+                    <button>В корзину</button>
+                </div>
+                <div class="credit_information">
+                    Доступно для покупки в кредит
+                </div>
+                <div class="characteristic">
+                    <div class="characteristic_nav">
+                        <ul>
+                            <li><a href="#" id="a_active">характеристики</a></li>
+                            <li><a href="#">описание</a></li>
+                            <li><a href="#">задать вопрос</a></li>
+                            <li><a href="#">оставить отзыв</a></li>
+                        </ul>
+                    </div>
+                    <div class="properties">
+                        <ul>
+                            <li class="properties_header">Общие</li>
+                            <li>
+                                <span>Торговая марка</span><span></span><span class="trademark"></span>
+                            </li>
+                            <li>
+                                <span>Артикул</span><span class="sid_products"></span>
+                            </li>
+                            <li>
+                                <span>Сертификат</span><span class="certificate"></span>
+                            </li>
+                            <li>
+                                <span>Страна</span><span class="country"></span>
+                            </li>
+                            <li>
+                                <span>Состав</span><span class="stuff"></span>
+                            </li>
+                            <li>
+                                <span>Серия</span><span class="series"></span>
+                            </li>
+                            <li class="properties_header">Упаковка и фасовка</li>
+                            <li>
+                                <span>В боксе</span><span class="in_box"></span>
+                            </li>
+                            <li>
+                                <span>Фасовка</span><span class="qty_rules"></span>
+                            </li>
+                            <li>
+                                <span>Индивидуальная упаковка</span><span>Пакет</span>
+                            </li>
+                            <li>
+                                <span>Размер упаковки</span><span class="box_size"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script type="text/javascript" src="build/constructor.js"></script>
+<script type="text/javascript" src="build/libs.js"></script>
 
-    <script type="text/javascript" src="build/app.js"></script>
+<script type="text/javascript" src="build/constructor.js"></script>
+
+<script type="text/javascript" src="build/app.js"></script>
+
+<script type="template" id="product-template">
+    <h1 class="name_products"><%= name %></h1>
+    <div class="products">
+        <div class="products_img">
+            <img class="show_img" src="<%= img %>" alt="show_img">
+        </div>
+        <div class="products_info">
+            <div class="basket">
+                <button>В корзину</button>
+            </div>
+            <div class="credit_information">
+                Доступно для покупки в кредит
+            </div>
+            <div class="characteristic">
+                <div class="characteristic_nav">
+                    <ul>
+                        <li><a href="#" id="a_active">характеристики</a></li>
+                        <li><a href="#">описание</a></li>
+                        <li><a href="#">задать вопрос</a></li>
+                        <li><a href="#">оставить отзыв</a></li>
+                    </ul>
+                </div>
+                <div class="properties">
+                    <ul>
+                        <li class="properties_header">Общие</li>
+                        <li>
+                            <span>Торговая марка</span><span><%= trademark %></span>
+                        </li>
+                        <li>
+                            <span>Артикул</span><span><%= sid_products %></span>
+                        </li>
+                        <li>
+                            <span>Сертификат</span><span><%= certificate %></span>
+                        </li>
+                        <li>
+                            <span>Страна</span><span><%= country %></span>
+                        </li>
+                        <li>
+                            <span>Состав</span><span><%= stuff %></span>
+                        </li>
+                        <li>
+                            <span>Серия</span><span><%= series %></span>
+                        </li>
+                        <li class="properties_header">Упаковка и фасовка</li>
+                        <li>
+                            <span>В боксе</span><span></span>
+                        </li>
+                        <li>
+                            <span>Фасовка</span><span></span>
+                        </li>
+                        <li>
+                            <span>Индивидуальная упаковка</span><span>Пакет</span>
+                        </li>
+                        <li>
+                            <span>Размер упаковки</span><span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
 </body>
 </html>

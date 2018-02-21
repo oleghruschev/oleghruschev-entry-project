@@ -2,38 +2,42 @@ const ProductsView = Backbone.View.extend({
     el: ".container",
 
     initialize: function () {
-      this.listenTo(this.model, 'sync', this.renderProductInformation)
+      this.listenTo(this.model, 'sync', this.renderProductInformation);
+        this.template = _.template($('#product-template').html());
     },
 
     renderProductInformation: function (model) {
-        this.$('.name_products').text(model.get("name"));
+        this.$('.products_wrap').html(
+            this.template({
+                name: model.get('name'),
 
 
-        if(model.get("trademark") == null) {
-            model.set("trademark", "Не имеет марки");
-            this.$('.trademark').text(model.get("trademark"));
-        } else {
-            this.$('.trademark').text(model.attributes.trademark.name);
-        }
+                trademark: model.get('trademark') ? model.attributes.trademark.name : "Не имеет марки",
 
-        this.$('.sid_products').text(model.get("sid"));
+                sid_products: model.get('sid'),
 
-        if(model.get("certificate") == null || undefined) model.set("certificate", "Не подлежит сертификации");
-        this.$('.certificate').text(model.get("certificate"));
+                certificate: (model.get('certificate') == undefined) ? "Не подлежит сертификации" : model.get('certificate') ,
 
-        this.$('.country').text(model.attributes.country.name);
+                country: model.attributes.country.name,
 
-        this.$('.stuff').text(model.get("stuff"));
+                stuff: model.get('stuff'),
 
-        if(model.get("series") == null || undefined) {
-            model.set("series", "Не имеет серии");
-            this.$('.series').text(model.get("series"));
-        } else {
-            this.$('.series').text(model.attributes.series.name);
-        }
+                series: model.get('series') ? model.get('series') : "Не имеет серии",
 
 
+                img: model.get('img')
+            })
+        )
 
-        this.$('.show_img').attr("src", model.get("img"));
+        //
+        // const in_box = model.get("in_box") + ' ' +  model.get("inBoxPluralNameFormat")
+        // this.$('.in_box').text(in_box);
+        //
+        // this.$('.qty_rules').text(model.get("qty_rules"));
+        //
+        // const box_size = model.get("box_depth") + 'см x ' + model.get("box_width") + 'см x ' + model.get("box_height")
+        //
+        //
+        // this.$('.show_img').attr("src", model.get("img"));
     },
 });
