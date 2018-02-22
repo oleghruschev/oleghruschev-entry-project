@@ -43,6 +43,7 @@ p {
   left: 50%;
   margin-top: -150px;
   margin-left: -200px;
+  z-index: 5;
   background-color: $site-color;
   @include border-radius(11px);
 }
@@ -94,10 +95,10 @@ p {
 
 .close {
   position: absolute;
-  right: 20px;
+  right: 5px;
   top: 8px;
   width: 30px;
-  height: 30px;
+  height: 23px;
   opacity: 0.3;
   cursor: pointer;
   &:hover {
@@ -105,7 +106,7 @@ p {
   }
   &:after,&:before {
     position: absolute;
-    left: 32px;
+    left: 15px;
     content: ' ';
     height: 15px;
     width: 2px;

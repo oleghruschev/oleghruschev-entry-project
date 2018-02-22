@@ -24,20 +24,15 @@ const ProductsView = Backbone.View.extend({
 
                 series: model.get('series') ? model.get('series') : "Не имеет серии",
 
+                in_box: model.get("in_box") + ' ' + model.get("inBoxPluralNameFormat"),
+
+                qty_rules: model.get("qty_rules"),
+
+                box_size: model.get("box_depth") + 'см x ' + model.get("box_width") + 'см x ' + model.get("box_height") + 'см',
+
 
                 img: model.get('img')
             })
         )
-
-        //
-        // const in_box = model.get("in_box") + ' ' +  model.get("inBoxPluralNameFormat")
-        // this.$('.in_box').text(in_box);
-        //
-        // this.$('.qty_rules').text(model.get("qty_rules"));
-        //
-        // const box_size = model.get("box_depth") + 'см x ' + model.get("box_width") + 'см x ' + model.get("box_height")
-        //
-        //
-        // this.$('.show_img').attr("src", model.get("img"));
     },
 });
