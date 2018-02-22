@@ -51,7 +51,16 @@ module.exports = function(grunt) {
               tasks: ['sass'],
               options: {
                   spawn: false
-              }
+              },
+              scripts: {
+                  files: [
+                      'src/constructors/*.js'
+                  ],
+                  tasks: ['concat'],
+                  options: {
+                      spawn: false
+                  }
+              },
           }
       }
   });

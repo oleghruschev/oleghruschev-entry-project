@@ -55,7 +55,7 @@ p {
 .modal {
   padding: 30px;
   max-width: 350px;
-  height: 335px;
+
   h2{
     margin-top: 8px;
     margin-bottom: 37px;
@@ -66,8 +66,13 @@ p {
     padding: 5px;
     outline: none;
     @include border-radius(5px);
+    &::-webkit-input-placeholder {
+      font-style: italic;
+      font-size: 1.2rem;
+    }
   }
   button {
+    margin-right: 5px;
     padding: 7px;
     @include border-radius(15px);;
     outline: none;
@@ -191,7 +196,7 @@ p {
   @include border-radius(10px);
 }
 
-.characteristic {
+.characteristic_wrap {
   height: 470px;
   font-size: 1.7rem;
 }
@@ -210,7 +215,6 @@ p {
         color: #1f84db;
         text-transform: uppercase;
         white-space: nowrap;
-        text-transform: uppercase;
         cursor: pointer;
         border-bottom: 1px dashed #1f84db;
         &:hover {
@@ -222,7 +226,7 @@ p {
   }
 }
 
-#a_active {
+#active_a {
   color: #000;
   border: none;
 }
@@ -248,4 +252,41 @@ p {
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: bold;
+}
+
+.reviews {
+  max-width: 85%;
+  background-color: $site-color;
+  padding-top: 10px;
+}
+
+.rating_wrap {
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.rating {
+  width: 50%;
+  float: left;
+  p{
+    margin-bottom: 0;
+  }
+}
+
+.publition {
+  width: 50%;
+  float: right;
+  p {
+    margin-bottom: 0;
+  }
+  label {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  input {
+    margin-left: 0;
+    cursor: pointer;
+  }
 }

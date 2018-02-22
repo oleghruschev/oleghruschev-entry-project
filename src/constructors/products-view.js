@@ -1,10 +1,35 @@
 const ProductsView = Backbone.View.extend({
     el: ".container",
 
+
+    events: {// тесты
+        "click .reviews_a"        : "openReviews",
+        "click .characteristic_a" : "openCharacteristic"
+    },
+
+
     initialize: function () {
       this.listenTo(this.model, 'sync', this.renderProductInformation);
         this.template = _.template($('#product-template').html());
     },
+
+
+    openReviews: function () { // тесты
+        this.$('.characteristic').addClass("modal_close");
+        this.$('.reviews').removeClass("modal_close");
+
+        this.$('.characteristic_a').removeAttr('id');
+        this.$('.reviews_a').attr('id', 'active_a');
+    },
+
+    openCharacteristic: function () {// тесты
+        this.$('.characteristic').removeClass("modal_close");
+        this.$('.reviews').addClass("modal_close");
+
+        this.$('.characteristic_a').attr('id', 'active_a');
+        this.$('.reviews_a').removeAttr('id');
+    },
+
 
     renderProductInformation: function (model) {
         this.$('.products_wrap').html(

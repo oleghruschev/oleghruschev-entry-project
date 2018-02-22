@@ -23,6 +23,7 @@ const FormArticul = Backbone.View.extend({
       this.$('.products_wrap').removeClass("modal_close");
       this.$('.modal_wrap').addClass("modal_close");
       this.item.updateUrl($('.textarea').val());
-      this.item.fetch()
+      this.item.fetch();
+      this.$('.textarea').val("");
     }
 });
