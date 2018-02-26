@@ -2,7 +2,7 @@ const ProductsView = Backbone.View.extend({
     el: ".container",
 
 
-    events: {// тесты
+    events: {
         "click .reviews_a"        : "openReviews",
         "click .characteristic_a" : "openCharacteristic"
     },
@@ -14,17 +14,17 @@ const ProductsView = Backbone.View.extend({
     },
 
 
-    openReviews: function () { // тесты
+    openReviews: function () {
         this.$('.characteristic').addClass("modal_close");
-        this.$('.reviews').removeClass("modal_close");
+        this.$('.reviews_wrap').removeClass("modal_close");
 
         this.$('.characteristic_a').removeAttr('id');
         this.$('.reviews_a').attr('id', 'active_a');
     },
 
-    openCharacteristic: function () {// тесты
+    openCharacteristic: function () {
         this.$('.characteristic').removeClass("modal_close");
-        this.$('.reviews').addClass("modal_close");
+        this.$('.reviews_wrap').addClass("modal_close");
 
         this.$('.characteristic_a').attr('id', 'active_a');
         this.$('.reviews_a').removeAttr('id');

@@ -94,6 +94,7 @@ p {
 }
 
 .modal_p {
+  font-size: 1.2rem;
   font-style: italic;
   color: #888888;
 }
@@ -289,4 +290,41 @@ p {
     margin-left: 0;
     cursor: pointer;
   }
+}
+
+.new_comment {
+  max-width: 90%;
+  margin: 30px 0;
+  padding: 30px 0 30px 30px;
+  &:hover {
+    background-color: #edf7ee;
+  }
+}
+
+.star-rating__wrap{
+  display: inline-block;
+  font-size: 1.6rem;
+}
+.star-rating__wrap:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.star-rating__ico{
+  float: right;
+  padding-left: 6px;
+  cursor: pointer;
+  color: #FFB300;
+}
+.star-rating__ico:last-child{
+  padding-left: 0;
+}
+.star-rating__input{
+  display: none;
+}
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before
+{
+  content: "\f005";
 }

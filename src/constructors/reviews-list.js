@@ -1,3 +1,5 @@
-const ReviewsList = Backbone.Collection.Extend({
-    model: reviewsModel
+
+const ReviewsList = Backbone.Collection.extend({
+  model: ReviewsModel,
+  url: "none"
 });

@@ -11,6 +11,7 @@ describe('products-view', function () {
         instance = createInstance();
         instance.model.trigger('sync');
         expect(instance.renderProductInformation).toHaveBeenCalledTimes(1);
+
     });
 
     it('call the updateUrl', function() {
@@ -23,5 +24,6 @@ describe('products-view', function () {
         spyOn(ProductsModel.prototype, 'fetch');
         $('.append_products').trigger('click');
         expect(instance.model.fetch).toHaveBeenCalled();
-    })
+    });
+
 });

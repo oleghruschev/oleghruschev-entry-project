@@ -5,7 +5,7 @@ describe("form-articul", function() {
             '<button class="append_btn"></button>' +
             '<div class="modal_wrap">' +
                 '<button class="append_products"></button>' +
-                '<span class="close"></span>' +
+
             '</div>' +
             '<div class="products_wrap"></div>' +
                 '<h1 class="name_products">Название товара</h1>' +
@@ -37,5 +37,9 @@ describe("form-articul", function() {
 
     it('reliable Url', function() {
         expect(formArticul.item.baseUrl).toEqual('https://www.sima-land.ru/api/v3/item/')
+    });
+    it("open the reviews", function() {
+        expect($('.reviews_wrap')).not.toHaveClass('modal_close');
+        expect($('.characteristic')).not.toHaveClass('modal_close');
     });
 });

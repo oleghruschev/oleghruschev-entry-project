@@ -6,12 +6,12 @@
     <title>sima_land</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 
 </head>
 <body>
 <div class="container">
-    <button class="append_btn">+Добавить товары по артикулу</button>
+
     <div class="modal_wrap modal_close">
         <span class="close"></span>
         <div class="modal">
@@ -24,91 +24,18 @@
         </div>
     </div>
 
-    <div class="products_wrap ">
-        <h1 class="name_products">Название товара</h1>
-        <div class="products">
-            <div class="products_img">
-                <img class="show_img" alt="show_img">
-            </div>
-            <div class="products_info">
-                <div class="basket">
-                    <button>В корзину</button>
-                </div>
-                <div class="credit_information">
-                    Доступно для покупки в кредит
-                </div>
-                <div class="characteristic_wrap">
-                    <div class="characteristic_nav">
-                        <ul>
-                            <li><a class="characteristic_a" id="active_a" >характеристики</a></li>
-                            <li><a href="#">описание</a></li>
-                            <li><a href="#">задать вопрос</a></li>
-                            <li><a class="reviews_a">оставить отзыв</a></li>
-                        </ul>
-                    </div>
-                    <div class="characteristic modal_close">
-                        <div class="properties">
-                            <ul>
-                                <li class="properties_header">Общие</li>
-                                <li>
-                                    <span>Торговая марка</span><span></span><span class="trademark"></span>
-                                </li>
-                                <li>
-                                    <span>Артикул</span><span class="sid_products"></span>
-                                </li>
-                                <li>
-                                    <span>Сертификат</span><span class="certificate"></span>
-                                </li>
-                                <li>
-                                    <span>Страна</span><span class="country"></span>
-                                </li>
-                                <li>
-                                    <span>Состав</span><span class="stuff"></span>
-                                </li>
-                                <li>
-                                    <span>Серия</span><span class="series"></span>
-                                </li>
-                                <li class="properties_header">Упаковка и фасовка</li>
-                                <li>
-                                    <span>В боксе</span><span class="in_box"></span>
-                                </li>
-                                <li>
-                                    <span>Фасовка</span><span class="qty_rules"></span>
-                                </li>
-                                <li>
-                                    <span>Индивидуальная упаковка</span><span>Пакет</span>
-                                </li>
-                                <li>
-                                    <span>Размер упаковки</span><span class="box_size"></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="reviews  modal">
-                        <p>Оставить отзыв</p>
-                        <div class="rating_wrap">
-                            <div class="rating">
-                                <p style="font-size: 1.4rem">Ваша оценка</p>
-                            </div>
-                            <div class="publition">
-                                <p style="font-size: 1.4rem">Публиковать</p>
-                                <input id="feature1" class="radio" type="radio" name="feature" checked="cheсked" >
-                                <label for="feature1">От моего имени</label>
-                                <input id="feature2" class="radio" type="radio" name="feature" checked="cheсked" >
-                                <label for="feature2">Анонимно</label>
-                            </div>
-                        </div>
-                        <p>Коментарий</p>
-                        <textarea class="textarea_reviews" placeholder="Расскажите о своем опыте использования товара. Оцените его качество, удобство и соответствие характеристик"></textarea>
-                        <p class="modal_p">Все отзывы проходят модерацию согласно правилам</p>
-                        <button class="cancel">Отмена</button>
-                        <button class="append_reviews">Отправить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="products_wrap">
+        <button class="append_btn">+Добавить товары по артикулу</button>
     </div>
 </div>
+
+<script type="template" id="reviews-template">
+  <div class="new_comment">
+      <p><%= stars %></p>
+    <p><%= title %></p>
+    <span class="reviews_date modal_p"><%= date %></span>
+  </div>
+</script>
 
 <script type="text/javascript" src="build/libs.js"></script>
 
@@ -116,89 +43,118 @@
 
 <script type="text/javascript" src="build/app.js"></script>
 
+<script type="template" id="reviews-template">
+    <div class="new_comment">
+        <p><%= stars %></p>
+        <p><%= title %></p>
+        <span class="reviews_date modal_p"><%= date %></span>
+    </div>
+</script>
+
 <script type="template" id="product-template">
-    <h1 class="name_products"><%= name %></h1>
-    <div class="products">
-        <div class="products_img">
-            <img class="show_img" src="<%= img %>" alt="show_img">
-        </div>
-        <div class="products_info">
-            <div class="basket">
-                <button>В корзину</button>
-            </div>
-            <div class="credit_information">
-                Доступно для покупки в кредит
-            </div>
-            <div class="characteristic_wrap">
-                <div class="characteristic_nav">
-                    <ul>
-                        <li><a class="characteristic_a" id="active_a" >характеристики</a></li>
-                        <li><a href="#">описание</a></li>
-                        <li><a href="#">задать вопрос</a></li>
-                        <li><a class="reviews_a">оставить отзыв</a></li>
-                    </ul>
-                </div>
-                <div class="characteristic">
-                    <div class="properties">
-                        <ul>
-                            <li class="properties_header">Общие</li>
-                            <li>
-                                <span>Торговая марка</span><span><%= trademark %></span>
-                            </li>
-                            <li>
-                                <span>Артикул</span><span><%= sid_products %></span>
-                            </li>
-                            <li>
-                                <span>Сертификат</span><span><%= certificate %></span>
-                            </li>
-                            <li>
-                                <span>Страна</span><span><%= country %></span>
-                            </li>
-                            <li>
-                                <span>Состав</span><span><%= stuff %></span>
-                            </li>
-                            <li>
-                                <span>Серия</span><span><%= series %></span>
-                            </li>
-                            <li class="properties_header">Упаковка и фасовка</li>
-                            <li>
-                                <span>В боксе</span><span><%= in_box %></span>
-                            </li>
-                            <li>
-                                <span>Фасовка</span><span><%= qty_rules %></span>
-                            </li>
-                            <li>
-                                <span>Индивидуальная упаковка</span><span>Пакет</span>
-                            </li>
-                            <li>
-                                <span>Размер упаковки</span><span><%= box_size %></span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="reviews  modal">
-                    <p>Оставить отзыв</p>
-                    <div class="rating_wrap">
-                        <div class="rating">
-                            <p style="font-size: 1.4rem">Ваша оценка</p>
-                        </div>
-                        <div class="publition">
-                            <p style="font-size: 1.4rem">Публиковать</p>
-                            <input id="feature1" class="radio" type="radio" name="feature" checked="cheсked" >
-                            <label for="feature1">От моего имени</label>
-                            <input id="feature2" class="radio" type="radio" name="feature" checked="cheсked" >
-                            <label for="feature2">Анонимно</label>
-                        </div>
-                    </div>
-                    <p>Коментарий</p>
-                    <textarea class="textarea_reviews" placeholder="Расскажите о своем опыте использования товара. Оцените его качество, удобство и соответствие характеристик"></textarea>
-                    <p class="modal_p">Все отзывы проходят модерацию согласно правилам</p>
-                    <button class="cancel">Отмена</button>
-                    <button class="append_reviews">Отправить</button>
-                </div>
+  <div class="products_wrap">
+      <h1 class="name_products"><%= name %></h1>
+      <div class="products">
+          <div class="products_img">
+              <img class="show_img" src="<%= img %>" alt="show_img">
+          </div>
+          <div class="products_info">
+              <div class="basket">
+                  <button>В корзину</button>
+              </div>
+              <div class="credit_information">
+                  Доступно для покупки в кредит
+              </div>
+              <div class="characteristic_wrap">
+                  <div class="characteristic_nav">
+                      <ul>
+                          <li><a class="characteristic_a" id="active_a" >характеристики</a></li>
+                          <li><a href="#">описание</a></li>
+                          <li><a href="#">задать вопрос</a></li>
+                          <li><a class="reviews_a">оставить отзыв</a></li>
+                      </ul>
+                  </div>
+                  <div class="characteristic">
+                      <div class="properties">
+                          <ul>
+                              <li class="properties_header">Общие</li>
+                              <li>
+                                  <span>Торговая марка</span><span><%= trademark %></span>
+                              </li>
+                              <li>
+                                  <span>Артикул</span><span><%= sid_products %></span>
+                              </li>
+                              <li>
+                                  <span>Сертификат</span><span><%= certificate %></span>
+                              </li>
+                              <li>
+                                  <span>Страна</span><span><%= country %></span>
+                              </li>
+                              <li>
+                                  <span>Состав</span><span><%= stuff %></span>
+                              </li>
+                              <li>
+                                  <span>Серия</span><span><%= series %></span>
+                              </li>
+                              <li class="properties_header">Упаковка и фасовка</li>
+                              <li>
+                                  <span>В боксе</span><span><%= in_box %></span>
+                              </li>
+                              <li>
+                                  <span>Фасовка</span><span><%= qty_rules %></span>
+                              </li>
+                              <li>
+                                  <span>Индивидуальная упаковка</span><span>Пакет</span>
+                              </li>
+                              <li>
+                                  <span>Размер упаковки</span><span><%= box_size %></span>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="reviews_wrap modal_close">
+                      <div class="reviews  modal ">
+                          <p>Оставить отзыв</p>
+                          <div class="rating_wrap">
+                              <div class="rating">
+                                  <p style="font-size: 1.4rem">Ваша оценка</p>
+                                  <div class="star-rating">
+                                      <div class="star-rating__wrap">
+                                          <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="Отличный товар"></label>
+                                          <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="Хороший товар"></label>
+                                          <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="Нормальный товар"></label>
+                                          <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="Плохой товар"></label>
+                                          <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                                          <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="Очень плохой товар"></label>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="publition">
+                                  <p style="font-size: 1.4rem">Публиковать</p>
+                                  <input id="feature1" class="radio" type="radio" name="feature" checked="cheсked" >
+                                  <label for="feature1">От моего имени</label>
+                                  <input id="feature2" class="radio" type="radio" name="feature" checked="cheсked" >
+                                  <label for="feature2">Анонимно</label>
+                              </div>
+                          </div>
+                          <p>Коментарий</p>
+                          <textarea class="textarea_reviews" placeholder="Расскажите о своем опыте использования товара. Оцените его качество, удобство и соответствие характеристик"></textarea>
+                          <p class="modal_p">Все отзывы проходят модерацию согласно правилам</p>
+                          <button class="cancel">Отмена</button>
+                          <button class="append_reviews">Отправить</button>
+                      </div>
+                      <div id="reviews_list">
+
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
+  </div>
 </script>
 </body>
 </html>
