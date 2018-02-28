@@ -228,9 +228,12 @@ p {
   }
 }
 
-#active {
+.characteristic_nav ul li .active {
   color: #000;
   border: none;
+  &:hover {
+    color: #000;
+  }
 }
 
 .properties {
@@ -360,6 +363,6 @@ p {
 }
 
 .star_ico:before,
-.my-class ~ .star_ico:before {
+.display_rating ~ .star_ico:before {
   content: "\f005";
 }

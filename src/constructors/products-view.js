@@ -18,16 +18,16 @@ const ProductsView = Backbone.View.extend({
         this.$('.characteristic').addClass("block_close");
         this.$('.reviews_wrap').removeClass("block_close");
 
-        this.$('.characteristic_submenu').removeAttr('id');
-        this.$('.reviews_submenu').attr('id', 'active');
+        this.$('.characteristic_submenu').removeClass("active");
+        this.$('.reviews_submenu').addClass("active");
     },
 
     openCharacteristic: function () {
         this.$('.characteristic').removeClass("block_close");
         this.$('.reviews_wrap').addClass("block_close");
 
-        this.$('.characteristic_submenu').attr('id', 'active');
-        this.$('.reviews_submenu').removeAttr('id');
+        this.$('.characteristic_submenu').addClass("active");
+        this.$('.reviews_submenu').removeClass("active");
     },
 
 

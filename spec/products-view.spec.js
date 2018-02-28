@@ -11,7 +11,6 @@ describe('products-view', function () {
         instance = createInstance();
         instance.model.trigger('sync');
         expect(instance.renderProductInformation).toHaveBeenCalledTimes(1);
-
     });
 
     it('call the updateUrl', function() {
