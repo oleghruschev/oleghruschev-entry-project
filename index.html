@@ -19,7 +19,7 @@
             <p>Введите артикул через пробел или с новой строки, например 1243242 2153287 1236302 1236193 1236194 1236276
                 2332171 1204972</p>
             <textarea class="textarea"></textarea>
-            <p class="modal_p">Не более 1000 артикулов за раз</p>
+            <p class="footer_paragraph">Не более 1000 артикулов за раз</p>
             <button class="append_products">Добавить</button>
         </div>
     </div>
@@ -31,9 +31,20 @@
 
 <script type="template" id="reviews-template">
   <div class="new_comment">
-      <p><%= stars %></p>
+      <div class="star-rating__wrap">
+          <div class="star_block five"></div>
+          <span class="star_ico fa fa-star-o fa-lg"  title="Отличный товар"></span>
+          <div class="star_block foo"></div>
+          <span class="star_ico fa fa-star-o fa-lg"  title="Хороший товар"></span>
+          <div class="star_block three"></div>
+          <span class="star_ico fa fa-star-o fa-lg"  title="Нормальный товар"></span>
+          <div class="star_block twoo"></div>
+          <span class="star_ico fa fa-star-o fa-lg"  title="Плохой товар"></span>
+          <div class="star_block one"></div>
+          <span class="star_ico fa fa-star-o fa-lg"  title="Очень плохой товар"></span>
+      </div>
     <p><%= title %></p>
-    <span class="reviews_date modal_p"><%= date %></span>
+    <span class="reviews_date footer_paragraph"><%= date %></span>
   </div>
 </script>
 
@@ -42,14 +53,6 @@
 <script type="text/javascript" src="build/constructor.js"></script>
 
 <script type="text/javascript" src="build/app.js"></script>
-
-<script type="template" id="reviews-template">
-    <div class="new_comment">
-        <p><%= stars %></p>
-        <p><%= title %></p>
-        <span class="reviews_date modal_p"><%= date %></span>
-    </div>
-</script>
 
 <script type="template" id="product-template">
   <div class="products_wrap">
@@ -66,14 +69,14 @@
                   Доступно для покупки в кредит
               </div>
               <div class="characteristic_wrap">
-                  <div class="characteristic_nav">
+                  <nav class="characteristic_nav">
                       <ul>
-                          <li><a class="characteristic_a" id="active_a" >характеристики</a></li>
+                          <li><a class="characteristic_submenu" id="active" >характеристики</a></li>
                           <li><a href="#">описание</a></li>
                           <li><a href="#">задать вопрос</a></li>
-                          <li><a class="reviews_a">оставить отзыв</a></li>
+                          <li><a class="reviews_submenu">оставить отзыв</a></li>
                       </ul>
-                  </div>
+                  </nav>
                   <div class="characteristic">
                       <div class="properties">
                           <ul>
@@ -104,7 +107,7 @@
                                   <span>Фасовка</span><span><%= qty_rules %></span>
                               </li>
                               <li>
-                                  <span>Индивидуальная упаковка</span><span>Пакет</span>
+                                  <span>Индивидуальная упаковка</span><span><%= packaging %></span>
                               </li>
                               <li>
                                   <span>Размер упаковки</span><span><%= box_size %></span>
@@ -132,6 +135,7 @@
                                           <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="Очень плохой товар"></label>
                                       </div>
                                   </div>
+                                  <p class="rating_fault modal_close">Вы забыли поставить оценку</p>
                               </div>
                               <div class="publition">
                                   <p style="font-size: 1.4rem">Публиковать</p>
@@ -142,8 +146,9 @@
                               </div>
                           </div>
                           <p>Коментарий</p>
-                          <textarea class="textarea_reviews" placeholder="Расскажите о своем опыте использования товара. Оцените его качество, удобство и соответствие характеристик"></textarea>
-                          <p class="modal_p">Все отзывы проходят модерацию согласно правилам</p>
+                          <textarea class="textarea_reviews" placeholder="Расскажите о своем опыте использования товара. Оцените его качество, удобство и соответствие характеристик" placeholder="fsdfds"></textarea>
+                          <p class="detail modal_close">Напишите подробнее</p>
+                          <p class="footer_paragraph">Все отзывы проходят модерацию согласно правилам</p>
                           <button class="cancel">Отмена</button>
                           <button class="append_reviews">Отправить</button>
                       </div>

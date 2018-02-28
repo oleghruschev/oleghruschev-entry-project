@@ -15,6 +15,3 @@ describe('reviews-list', function () {
     })
 
 });
-
-
-

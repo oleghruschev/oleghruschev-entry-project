@@ -93,7 +93,8 @@ p {
   }
 }
 
-.modal_p {
+.footer_paragraph {
+  margin-top: 1px;
   font-size: 1.2rem;
   font-style: italic;
   color: #888888;
@@ -128,7 +129,7 @@ p {
 
 .products_wrap {
   max-width: 100%;
-  min-width: 1000px;
+  min-width: 1150px;
   padding-top: 1px;
   height: 800px;
   background: linear-gradient(skyblue 4%, #fff 37%);
@@ -163,7 +164,7 @@ p {
 }
 
 .basket {
-  width: 77%;
+  width: 67%;
   height: 110px;
   margin-top: 90px;
   margin-bottom: 30px;
@@ -227,7 +228,7 @@ p {
   }
 }
 
-#active_a {
+#active {
   color: #000;
   border: none;
 }
@@ -256,7 +257,7 @@ p {
 }
 
 .reviews {
-  max-width: 85%;
+  max-width: 100%;
   background-color: $site-color;
   padding-top: 10px;
 }
@@ -268,7 +269,7 @@ p {
 }
 
 .rating {
-  width: 50%;
+  width: 40%;
   float: left;
   p{
     margin-bottom: 0;
@@ -276,7 +277,7 @@ p {
 }
 
 .publition {
-  width: 50%;
+  width: 60%;
   float: right;
   p {
     margin-bottom: 0;
@@ -292,6 +293,14 @@ p {
   }
 }
 
+.rating_fault,
+.detail {
+  margin: 1px;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: red;
+}
+
 .new_comment {
   max-width: 90%;
   margin: 30px 0;
@@ -301,30 +310,52 @@ p {
   }
 }
 
-.star-rating__wrap{
+.star-rating__wrap {
   display: inline-block;
   font-size: 1.6rem;
 }
-.star-rating__wrap:after{
+
+.star-rating__wrap:after {
   content: "";
   display: table;
   clear: both;
 }
-.star-rating__ico{
+
+.star-rating__ico {
   float: right;
   padding-left: 6px;
   cursor: pointer;
   color: #FFB300;
 }
-.star-rating__ico:last-child{
+
+.star-rating__ico:last-child {
   padding-left: 0;
 }
-.star-rating__input{
+
+.star-rating__input,
+.star_block {
   display: none;
 }
+
 .star-rating__ico:hover:before,
 .star-rating__ico:hover ~ .star-rating__ico:before,
-.star-rating__input:checked ~ .star-rating__ico:before
-{
+.star-rating__input:checked ~ .star-rating__ico:before,
+.my-class ~ .star-rating__ico:before {
+  content: "\f005";
+}
+
+.star_ico{
+  float: right;
+  padding-left: 6px;
+  cursor: pointer;
+  color: #FFB300;
+}
+
+.star_ico:last-child {
+  padding-left: 0;
+}
+
+.star_ico:before,
+.my-class ~ .star_ico:before {
   content: "\f005";
 }

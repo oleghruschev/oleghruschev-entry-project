@@ -3,8 +3,8 @@ const ProductsView = Backbone.View.extend({
 
 
     events: {
-        "click .reviews_a"        : "openReviews",
-        "click .characteristic_a" : "openCharacteristic"
+        "click .reviews_submenu"        : "openReviews",
+        "click .characteristic_submenu" : "openCharacteristic"
     },
 
 
@@ -18,16 +18,16 @@ const ProductsView = Backbone.View.extend({
         this.$('.characteristic').addClass("modal_close");
         this.$('.reviews_wrap').removeClass("modal_close");
 
-        this.$('.characteristic_a').removeAttr('id');
-        this.$('.reviews_a').attr('id', 'active_a');
+        this.$('.characteristic_submenu').removeAttr('id');
+        this.$('.reviews_submenu').attr('id', 'active');
     },
 
     openCharacteristic: function () {
         this.$('.characteristic').removeClass("modal_close");
         this.$('.reviews_wrap').addClass("modal_close");
 
-        this.$('.characteristic_a').attr('id', 'active_a');
-        this.$('.reviews_a').removeAttr('id');
+        this.$('.characteristic_submenu').attr('id', 'active');
+        this.$('.reviews_submenu').removeAttr('id');
     },
 
 
@@ -35,7 +35,6 @@ const ProductsView = Backbone.View.extend({
         this.$('.products_wrap').html(
             this.template({
                 name: model.get('name'),
-
 
                 trademark: model.get('trademark') ? model.attributes.trademark.name : "Не имеет марки",
 
@@ -53,8 +52,9 @@ const ProductsView = Backbone.View.extend({
 
                 qty_rules: model.get("qty_rules"),
 
-                box_size: model.get("box_depth") + 'см x ' + model.get("box_width") + 'см x ' + model.get("box_height") + 'см',
+                packaging: (model.get('packaging') == undefined ) ? "Пакет" : model.get('packaging'),
 
+                box_size: model.get("box_depth") + 'см x ' + model.get("box_width") + 'см x ' + model.get("box_height") + 'см',
 
                 img: model.get('img')
             })
