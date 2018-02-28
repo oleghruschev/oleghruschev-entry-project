@@ -12,9 +12,9 @@
 <body>
 <div class="container">
 
-    <div class="modal_wrap modal_close">
+    <div class="modal_wrap block_close">
         <span class="close"></span>
-        <div class="modal">
+        <div class="form">
             <p>Добавление товара в корзину по артикулу</p>
             <p>Введите артикул через пробел или с новой строки, например 1243242 2153287 1236302 1236193 1236194 1236276
                 2332171 1204972</p>
@@ -33,15 +33,15 @@
   <div class="new_comment">
       <div class="star-rating__wrap">
           <div class="star_block five"></div>
-          <span class="star_ico fa fa-star-o fa-lg"  title="Отличный товар"></span>
+          <span class="star_ico fa fa-star-o fa-lg" title="Отличный товар"></span>
           <div class="star_block foo"></div>
-          <span class="star_ico fa fa-star-o fa-lg"  title="Хороший товар"></span>
+          <span class="star_ico fa fa-star-o fa-lg" title="Хороший товар"></span>
           <div class="star_block three"></div>
-          <span class="star_ico fa fa-star-o fa-lg"  title="Нормальный товар"></span>
+          <span class="star_ico fa fa-star-o fa-lg" title="Нормальный товар"></span>
           <div class="star_block twoo"></div>
-          <span class="star_ico fa fa-star-o fa-lg"  title="Плохой товар"></span>
+          <span class="star_ico fa fa-star-o fa-lg" title="Плохой товар"></span>
           <div class="star_block one"></div>
-          <span class="star_ico fa fa-star-o fa-lg"  title="Очень плохой товар"></span>
+          <span class="star_ico fa fa-star-o fa-lg" title="Очень плохой товар"></span>
       </div>
     <p><%= title %></p>
     <span class="reviews_date footer_paragraph"><%= date %></span>
@@ -71,7 +71,7 @@
               <div class="characteristic_wrap">
                   <nav class="characteristic_nav">
                       <ul>
-                          <li><a class="characteristic_submenu" id="active" >характеристики</a></li>
+                          <li><a class="characteristic_submenu" id="active">характеристики</a></li>
                           <li><a href="#">описание</a></li>
                           <li><a href="#">задать вопрос</a></li>
                           <li><a class="reviews_submenu">оставить отзыв</a></li>
@@ -115,12 +115,12 @@
                           </ul>
                       </div>
                   </div>
-                  <div class="reviews_wrap modal_close">
-                      <div class="reviews  modal ">
+                  <div class="reviews_wrap block_close">
+                      <div class="reviews form">
                           <p>Оставить отзыв</p>
                           <div class="rating_wrap">
                               <div class="rating">
-                                  <p style="font-size: 1.4rem">Ваша оценка</p>
+                                  <span>Ваша оценка</span>
                                   <div class="star-rating">
                                       <div class="star-rating__wrap">
                                           <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
@@ -135,10 +135,10 @@
                                           <label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="Очень плохой товар"></label>
                                       </div>
                                   </div>
-                                  <p class="rating_fault modal_close">Вы забыли поставить оценку</p>
+                                  <p class="rating_fault block_close">Вы забыли поставить оценку</p>
                               </div>
                               <div class="publition">
-                                  <p style="font-size: 1.4rem">Публиковать</p>
+                                  <span>Публиковать</span>
                                   <input id="feature1" class="radio" type="radio" name="feature" checked="cheсked" >
                                   <label for="feature1">От моего имени</label>
                                   <input id="feature2" class="radio" type="radio" name="feature" checked="cheсked" >
@@ -147,7 +147,7 @@
                           </div>
                           <p>Коментарий</p>
                           <textarea class="textarea_reviews" placeholder="Расскажите о своем опыте использования товара. Оцените его качество, удобство и соответствие характеристик" placeholder="fsdfds"></textarea>
-                          <p class="detail modal_close">Напишите подробнее</p>
+                          <p class="detail block_close">Напишите подробнее</p>
                           <p class="footer_paragraph">Все отзывы проходят модерацию согласно правилам</p>
                           <button class="cancel">Отмена</button>
                           <button class="append_reviews">Отправить</button>

@@ -20,15 +20,15 @@ describe('reviews-view', function () {
 
 });
 
-describe('app-view', function () {
+describe('app-reviews-view', function () {
     var instance,
         createInstance = function () {
-            return new AppView()
+            return new AppReviewsView()
         };
 
 
     it('should run the render', function () {
-        spyOn(AppView.prototype, 'addOne');
+        spyOn(AppReviewsView.prototype, 'addOne');
         instance = createInstance();
         reviewsList.trigger('add');
         expect(instance.addOne).toHaveBeenCalledTimes(1);

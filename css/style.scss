@@ -48,11 +48,11 @@ p {
   @include border-radius(11px);
 }
 
-.modal_close {
+.block_close {
   display: none;
 }
 
-.modal {
+.form {
   padding: 30px;
   max-width: 350px;
 
@@ -271,16 +271,20 @@ p {
 .rating {
   width: 40%;
   float: left;
-  p{
-    margin-bottom: 0;
+  span{
+    font-size: 1.4rem;
+    display: block;
+    margin: 10px auto;
   }
 }
 
 .publition {
   width: 60%;
   float: right;
-  p {
-    margin-bottom: 0;
+  span{
+    font-size: 1.4rem;
+    display: block;
+    margin: 10px auto;
   }
   label {
     font-size: 1.4rem;

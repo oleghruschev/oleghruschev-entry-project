@@ -16,12 +16,14 @@ describe('products-view', function () {
 
     it('call the updateUrl', function() {
         spyOn(ProductsModel.prototype, 'updateUrl');
+        instance = createInstance();
         $('.append_products').trigger('click');
         expect(instance.model.updateUrl).toHaveBeenCalledTimes(1);
     });
 
     it('call the fetch', function() {
         spyOn(ProductsModel.prototype, 'fetch');
+        instance = createInstance();
         $('.append_products').trigger('click');
         expect(instance.model.fetch).toHaveBeenCalled();
     });
