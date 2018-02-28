@@ -22,14 +22,14 @@ describe('reviews-view', function () {
 describe('app-reviews-view', function () {
     var instance,
         createInstance = function () {
-            return new AppReviewsView()
+            return new AppReviewsView
         };
 
 
     it('should run the render', function () {
         spyOn(AppReviewsView.prototype, 'addOne');
         instance = createInstance();
-        reviewsList.trigger('add');
+        instance.reviewsList.trigger('add');
         expect(instance.addOne).toHaveBeenCalledTimes(1);
 
     });
