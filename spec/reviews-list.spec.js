@@ -11,6 +11,5 @@ describe('reviews-list', function () {
         ]);
 
         expect(list.length).toBe(2)
-
     })
 });

@@ -17,7 +17,6 @@ describe('reviews-view', function () {
     it('reviewsView', function () {
         expect(instance.tagName).toBe("div");
     });
-
 });
 
 describe('app-reviews-view', function () {

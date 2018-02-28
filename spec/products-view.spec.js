@@ -6,7 +6,7 @@ describe('products-view', function () {
             })
         };
 
-    it('should render headline on model sync', function () {
+    it('should render product information on model sync', function () {
         spyOn(ProductsView.prototype, 'renderProductInformation');
         instance = createInstance();
         instance.model.trigger('sync');
@@ -27,5 +27,4 @@ describe('products-view', function () {
         $('.append_products').trigger('click');
         expect(instance.model.fetch).toHaveBeenCalled();
     });
-
 });
